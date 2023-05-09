@@ -1,0 +1,116 @@
+:root{
+	--whiteColor: #FFFF;
+	--blackColor:#000000;
+	--greyColorText:#909090;
+	--greyBackGround:#eeeeee;
+	--grayIcons:#909090;
+	--grayCards:#DDDDDD;
+}
+
+.aboutSection{
+	padding-top: 100px;
+	width: 100%;
+	padding-bottom: 100px;
+}
+.displayContainer1{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.titleAbout>h2{
+	color: black;
+	font-size: 28px;
+	text-align: center;
+	margin: 0;
+}
+
+.since{
+	color: var(--greyColorText);
+	margin-top: 15px;
+	margin-bottom: 20px;
+	font-size: 13px;
+	font-weight: 400;
+	text-align: center;
+}
+
+.photoContainer{
+	width: 90%;
+}
+.photoContainer>img{
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	filter: grayscale(100%);
+	border-radius: 6px;
+}
+
+.aboutText{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.bornTitle{
+	font-size: 28px;
+	width: 80%;
+	margin-top: 30px;
+	font-weight: 600;
+	text-align: center;
+}
+.bornText{
+	margin: 20px 15px 10px 15px;
+	font-size: 13px;
+	color: var(--greyColorText);
+	font-weight: 400;
+	text-align: justify;
+}
+
+.socialIcons{
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-evenly;
+	width: 50%;
+}
+.socialIconsImg{
+	font-size: 28px;
+	cursor: pointer;
+	color: var(--greyColorText);
+	transition: .3ms ease-in-out;
+}
+.socialIconsImg:hover{
+	transform: scale(1.1);
+	color: var(--blackColor);
+
+}
+
+@media (min-width: 768px) {
+	.aboutSection{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.titleAbout>h2{
+		font-size: 40px;
+	}
+	.since{
+		font-size: 16px;
+	}
+  .displayContainer1{
+	display: grid;
+	max-width: 1024px;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 10px;
+  }
+  .photoContainer{
+	width: 100%;
+	height: 100%;
+	margin-left: 10px;
+  }
+  .bornText{
+	font-size: 16px;
+}
+}

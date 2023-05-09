@@ -1,0 +1,211 @@
+:root {
+  --whiteColor: #ffff;
+  --blackColor: #0000;
+  --greyColorText: #909090;
+  --greyBackGround: #dfdfdf;
+  --grayIcons: #909090;
+  --grayCards: #dddddd;
+}
+.navbar-section{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 500;
+  background: transparent;
+}
+ .active{
+  background: var(--whiteColor);
+}
+
+.navbarContainer {
+  height: 78px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  z-index: 500;
+}
+
+.navListDesktopView{
+  display: none;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.logoIcon {
+  font-size: 75px;
+  color: var(--grayCards);
+  padding-bottom: 10px;
+}
+
+
+.iconsCointainer {
+  display: flex;
+  gap: 16px;
+  margin-right: 16px;
+  font-size: 20px;
+  color: var(--whiteColor);
+}
+
+.sectionsContainer {
+  position: absolute;
+  height: 400px;
+  width: 100%;
+  top: -500rem;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: var(--whiteColor);
+  box-shadow: 0 2px 4px rgb(2, 15, 29, 0.0904);
+  z-index: 1000;
+  border-radius: 0 0 15px 20px;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-left: 48px;
+  gap: 24px;
+}
+
+li{
+  color: var(--grayIcons);
+  position: relative;
+  padding: 0 5px;
+  list-style: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+.active{
+  color: var(--grayIcons);
+}
+.activeItem{
+  color: var(--grayIcons);
+}
+
+.navItem:after{
+  content: "";
+  position: absolute;
+  background-color: var(--whiteColor);
+  height: 1px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+.navItem:hover:after{
+  color: var(--whiteColor);
+  width: 100%;
+}
+.navItem:hover{
+  color: var(--whiteColor);
+}
+.navItemMobile:after{
+  content: "";
+  position: absolute;
+  background-color: var(--blackColor);
+  height: 1px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+.navItemMobile:hover:after{
+  color: var(--blackColor);
+  width: 100%;
+}
+.navItemMobile:hover{
+  color: var(--blackColor);
+}
+
+.activeItem:after{
+  content: "";
+  position: absolute;
+  background-color: var(--blackColor);
+  height: 1px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+.activeItem:hover:after{
+  color: var(--blackColor);
+  width: 100%;
+}
+.activeItem:hover{
+  color: var(--blackColor);
+}
+
+.activeItem,.icon{
+  cursor: pointer;
+}
+
+.closeMenu {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  font-size: 24px;
+}
+
+.openMenu {
+  font-size: 26px;
+}
+.darkMode{
+	font-size: 24px;
+}
+
+.showed{
+  top: 0px;
+}
+
+@media (min-width: 1010px) {
+  .sectionsContainer{
+    display: none;
+  }
+  .navbar-section{
+    display: flex;
+    justify-content: center;
+  }
+  .navbarContainer{
+    max-width: 1024px;
+  }
+	.openMenu{
+		display: none;
+	}
+  .closeMenu{
+    display: none;
+  }
+  .darkMode{
+    margin-right: 20px;
+  }
+  .navbarContainer{
+    height: 88px;
+  }
+  .navListDesktopView{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: var(--whiteColor);
+    gap: 60px;
+  }
+  .active{
+    color: var(--grayIcons);
+  }
+  .activeItem{
+    color: var(--grayIcons);
+  }
+  .navListDesktopView>li{
+    font-size: 16px;
+    font-weight: 600;
+  }
+}

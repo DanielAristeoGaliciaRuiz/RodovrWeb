@@ -1,0 +1,82 @@
+:root{
+	--whiteColor: #FFFF;
+	--blackColor:#000000;
+	--greyColorText:#909090;
+	--greyBackGround:#eeeeee;
+	--grayIcons:#909090;
+	--grayCards:#DDDDDD;
+}
+
+.contactSection{
+	padding-top:100px ;
+	background-color: var(--greyBackGround);
+
+}
+.contactTitle{
+	/* position: absolute; */
+	text-align: center;
+	font-size: 28px;
+	font-weight: 600;
+	top: 50px;
+}
+
+.contactIconsContainer{
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.smallContainerContact{
+	display: flex;
+}
+
+.iconContainer{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.iconContact{
+	top: 50%;
+	font-size: 40px;
+	padding: 10px;
+	color: var(--grayIcons);
+}
+
+.infoContactContainer > p{
+	color:var(--greyColorText);
+	margin-top: 0px;
+}
+.infoContactContainer > h4{
+	margin-bottom: 0px;
+}
+.flex1{
+	margin-left: 25px;
+	margin-right: 25px;
+
+}
+
+
+.flex2{ 
+	margin-left: 25px;
+	margin-bottom: 100px;
+}
+
+.spaceDown{
+	height: 150px;
+	width: 100%;
+	background-color: white;
+}
+
+
+@media (min-width: 768px) {
+	.contactSection{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.contactIconsContainer{
+		max-width: 1024px;
+	}
+}
